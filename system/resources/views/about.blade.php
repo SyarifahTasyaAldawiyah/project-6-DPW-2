@@ -43,7 +43,7 @@
             <nav class="navbar navbar-light bg-light justify-content-between">
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="{{url('index')}}">Home</a>
+                  <a href="{{url('/')}}">Home</a>
                   <a href="{{url('login')}}">Login</a>
                   <a href="{{url('products')}}">Products</a>
                   <a href="{{url('about')}}">About</a>

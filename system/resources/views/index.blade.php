@@ -43,7 +43,7 @@
             <nav class="navbar navbar-light bg-light justify-content-between">
                <div id="mySidenav" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="{{url('index')}}">Home</a>
+                  <a href="{{url('/')}}">Home</a>
                   <a href="{{url('login')}}">Login</a>
                   <a href="{{url('products')}}">Products</a>
                   <a href="{{url('about')}}">About</a>
@@ -130,6 +130,56 @@
       </div>
       <!-- banner section end -->
       <!-- product section start -->
+      <div class="container py-5">
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header">
+                        Filter
+                    </div>
+                    <div class="card-body">
+
+                        <form action="{{ url('index/filter') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="" class="control-label">Nama produk</label>
+                                <input type="text" class="form-control" name="nama" value="{{ $nama ?? '' }}">
+                            </div>
+                            <br>
+                            <button class="btn btn-dark float-right"><i class="fa fa-search"></i> Filter</button>
+                        </form>
+
+
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url('shop/filter2') }}" method="POST">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="control-label">harga min</label>
+                                        <input type="text" class="form-control" name="harga_min"
+                                            value="{{ $harga_min ?? '' }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="control-label">harga max</label>
+                                        <input type="text" class="form-control" name="harga_max"
+                                            value="{{ $harga_max ?? '' }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <button class="btn btn-dark float-right"><i class="fa fa-search"></i>Filter</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
       <div class="product_section layout_padding">
          <div class="container">
             <div class="row">

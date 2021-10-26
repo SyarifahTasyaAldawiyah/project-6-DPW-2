@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClientController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +66,7 @@ Route::get('/contact',  [IndexController::class, 'showcontact']);
 Route::get('/products',  [IndexController::class, 'showproducts']);
 Route::get('/about',  [IndexController::class, 'showabout']);
 Route::get('/client',  [IndexController::class, 'showclient']);
+
+
+Route::post('index/filter', [ClientController::class, 'filter']);
+Route::post('index/filter2', [ClientController::class, 'filter2']);

@@ -94,11 +94,11 @@ class ProdukController extends Controller{
 
     // where date
 
-    // $data['list_produk'] = Produk::whereDate('created_at', '2021-10-21'  )->get();
+    // $data['list_produk'] = Produk::whereDate('created_at', '2021-10-26'  )->get();
 
     // where group
 
-    // $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereIn('stok', [10])->get();
+    $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereIn('stok', [2000])->get();
 
 
     // result
