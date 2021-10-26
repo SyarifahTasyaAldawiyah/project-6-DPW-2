@@ -39,30 +39,26 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn-dark float-right" ><i class="fa fa-search"></i> Filter</button>
+                            <button class="btn btn-primary float-right" ><i class="fa fa-search"></i> Filter</button>
                         </form>
                     </div>
                 </div>
 
          
-      <div class="card mt-3 pt-3">
-         <div class="card-body">
-            <div class="container-fluid">
-                  <div class="row ml-1 mr-2 mb-3">
-                     <h4>Data Produk</h4>
-                  </div>
-   		<div class="col-md-4">
-   			<a href="{{url('admin/produk/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i> Data Produk</a>
-   		</div>
-   	<div class="container">
-   		<table class="table">
-   			<thead>
-   				<th>No</th>
-   				<th>Aksi</th>
-   				<th>Nama</th>
-   				<th>Harga</th>
-   				<th>Stok</th>
-   			</thead>
+      <div class="card">
+                    <div class="card-header">
+                        Data produk
+                        <a href="{{url('admin/produk/create')}}" class="btn btn-primary float-right"><i class="fa fa-plus"></i> Data Produk</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-datatable">
+                            <thead>
+                                <th>No</th>
+                                <th>Aksi</th>
+                                <th>Nama</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                            </thead>
    			<tbody>
    				@foreach($list_produk as $produk)
    				<tr>
