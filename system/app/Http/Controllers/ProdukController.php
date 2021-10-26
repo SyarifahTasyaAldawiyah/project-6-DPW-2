@@ -45,18 +45,20 @@ class ProdukController extends Controller{
 		return redirect('admin/produk')->with('danger','Data Berhasil Dihapus');
 	}
 	function filter(){
-		// where
+
+	// where
     $nama= request('nama');
     $data['nama']= $nama;
 
-     $data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->get();
+    $data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->get();
 
 
     //  wherein
    
     $data['stok'] = request('stok');
+    $stok = explode(",", request('stok'));
 
-    // $data['list_produk'] = Produk::whereIn('stok', $stok)->get();
+    //$data['list_produk'] = Produk::whereIn('stok', $stok)->get();
 
 
 
@@ -67,7 +69,7 @@ class ProdukController extends Controller{
     $data['harga_min'] = $harga_min;
     $data['harga_max'] = $harga_max;
 
-   // $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
+    // $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->get();
 
     // where not
 
