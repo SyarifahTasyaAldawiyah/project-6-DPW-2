@@ -21,8 +21,8 @@
                <th>No</th>
                <th>Aksi</th>
                <th>Username</th>
-               <th>Nama</th>
                <th>Email</th>
+               <th>Nama</th>
             </thead>
             <tbody>
                @foreach($list_user as $user)
